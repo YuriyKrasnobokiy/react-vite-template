@@ -2,14 +2,14 @@
   "name": "react-vite-template",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://YuriyKrasnobokiy.github.io/react-vite-template",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "deploy": "gh-pages -d dist",
-    "predeploy": "npm run build",
-    "build": "vite build",
+    "build": "vite build --base=/react-vite-template/",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
