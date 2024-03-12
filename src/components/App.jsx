@@ -1,12 +1,12 @@
-import { Suspense } from "react";
+import { Suspense, lazy } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import { Home } from "../pages/Home/Home";
-import { Catalog } from "../pages/Catalog/Catalog";
+// import { Home } from "../pages/Home/Home";
+// import { Catalog } from "../pages/Catalog/Catalog";
 import { Loader } from "./Loader/Loader";
 import Layout from "./Layout/Layout";
 
-// const Home = lazy(() => import("pages/Home/Home"));
-// const Catalog = lazy(() => import("pages/Catalog/Catalog"));
+const Home = lazy(() => import("../pages/Home/Home"));
+const Catalog = lazy(() => import("../pages/Catalog/Catalog"));
 
 export const theme = {
   colors: {
