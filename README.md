@@ -1,6 +1,14 @@
-# React + Vite
+# React + Vite my template
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+# How to use this template
+
+- Tap the «Use this template» button and choose «Create a new repository» option
+- Change basename in main.jsx
+- Change repository name in vit.config.js
+- Change repository name in package.json (homepage and build)
+- Install dependencies with the command «npm install»
 
 Currently, two official plugins are available:
 
