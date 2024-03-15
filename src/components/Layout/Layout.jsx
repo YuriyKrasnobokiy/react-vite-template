@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
       <header>
         <HeaderWrapper>
           <NavLinkStyled to="/">Home</NavLinkStyled>
-          <NavLinkStyled to="/catalog">Catalog</NavLinkStyled>
+          <NavLinkStyled to="/products">Products</NavLinkStyled>
         </HeaderWrapper>
       </header>
       <main>{children}</main>

@@ -1,32 +1,65 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-// import { Home } from "../pages/Home/Home";
-// import { Catalog } from "../pages/Catalog/Catalog";
 import { Loader } from "./Loader/Loader";
 import Layout from "./Layout/Layout";
+import ProductDetails from "../pages/ProductDetails/ProductDetails";
+import GlobalStyles from "../GlobalStyles";
+import { ThemeProvider } from "styled-components";
 
 const Home = lazy(() => import("../pages/Home/Home"));
-const Catalog = lazy(() => import("../pages/Catalog/Catalog"));
+const Products = lazy(() => import("../pages/Products/Products"));
 
-export const theme = {
-  colors: {
-    textColor: "#121417",
-    secondTextColor: "#8a8a89",
-    accentColor: "#0b44cd",
-    secondAccentColor: "#3470ff",
+export const themes = {
+  light: {
+    colors: {
+      textColor: "#121417",
+      secondTextColor: "#8a8a89",
+      accentColor: "#0b44cd",
+      secondAccentColor: "#3470ff",
+      mainBgColor: "white",
+    },
+  },
+  dark: {
+    colors: {
+      textColor: "white",
+      secondTextColor: "#8a8a89",
+      accentColor: "#0b44cd",
+      secondAccentColor: "#3470ff",
+      mainBgColor: "#010101",
+    },
   },
 };
 
 export const App = () => {
+  const [currentTheme, setCurrentTheme] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme || "dark";
+  });
+
+  const toggleTheme = () => {
+    const newTheme = currentTheme === "light" ? "dark" : "light";
+    setCurrentTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
+
   return (
-    <Layout>
-      <Suspense fallback={<Loader />}>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/catalog" element={<Catalog />}></Route>
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-      </Suspense>
-    </Layout>
+    <ThemeProvider theme={themes[currentTheme]}>
+      <GlobalStyles />
+      <Layout>
+        <button onClick={toggleTheme}>
+          {currentTheme === "light"
+            ? "Switch to Dark Mode"
+            : "Switch to Light Mode"}
+        </button>
+        <Suspense fallback={<Loader />}>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/products" element={<Products />}></Route>
+            <Route path="/products/:productId/*" element={<ProductDetails />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </Suspense>
+      </Layout>
+    </ThemeProvider>
   );
 };
