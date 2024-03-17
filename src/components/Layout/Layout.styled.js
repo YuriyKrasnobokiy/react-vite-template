@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const HeaderWrapper = styled.div`
   display: flex;
   width: 1200px;
+  padding: 20px 40px;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
