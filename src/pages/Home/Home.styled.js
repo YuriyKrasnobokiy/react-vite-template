@@ -5,3 +5,6 @@ import styled from "styled-components";
 //   margin: 0 auto;
 //   padding: 20px 40px;
 // `;
+export const HomeText = styled.p`
+  color: ${(props) => props.theme.colors.textColor};
+`;

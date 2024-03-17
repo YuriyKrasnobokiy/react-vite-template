@@ -1,13 +1,20 @@
-import { HeaderWrapper, NavLinkStyled } from "./Layout.styled";
-import PropTypes from "prop-types";
+import { MaterialUISwitch } from "../Switch/Switch";
+import { HeaderNav, HeaderWrapper, NavLinkStyled } from "./Layout.styled";
+// import PropTypes from "prop-types";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, toggleTheme, currentTheme }) => {
   return (
     <>
       <header>
         <HeaderWrapper>
-          <NavLinkStyled to="/">Home</NavLinkStyled>
-          <NavLinkStyled to="/products">Products</NavLinkStyled>
+          <HeaderNav>
+            <NavLinkStyled to="/">Home</NavLinkStyled>
+            <NavLinkStyled to="/products">Products</NavLinkStyled>
+          </HeaderNav>
+          <MaterialUISwitch
+            onClick={toggleTheme}
+            checked={currentTheme === "dark"}
+          />
         </HeaderWrapper>
       </header>
       <main>{children}</main>
@@ -15,8 +22,8 @@ const Layout = ({ children }) => {
   );
 };
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+// Layout.propTypes = {
+//   children: PropTypes.node.isRequired,
+// };
 
 export default Layout;

@@ -5,6 +5,13 @@ export const HeaderWrapper = styled.div`
   display: flex;
   width: 1200px;
   margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const HeaderNav = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 export const NavLinkStyled = styled(NavLink)`

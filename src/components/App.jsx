@@ -45,12 +45,7 @@ export const App = () => {
   return (
     <ThemeProvider theme={themes[currentTheme]}>
       <GlobalStyles />
-      <Layout>
-        <button onClick={toggleTheme}>
-          {currentTheme === "light"
-            ? "Switch to Dark Mode"
-            : "Switch to Light Mode"}
-        </button>
+      <Layout currentTheme={currentTheme} toggleTheme={toggleTheme}>
         <Suspense fallback={<Loader />}>
           <Routes>
             <Route path="/" element={<Home />}></Route>
