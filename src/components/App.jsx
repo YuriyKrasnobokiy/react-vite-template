@@ -17,6 +17,7 @@ export const themes = {
       accentColor: "#0b44cd",
       secondAccentColor: "#3470ff",
       mainBgColor: "white",
+      ModalBgColor: "rgba(0, 0, 0, 0.5)",
     },
   },
   dark: {
@@ -26,6 +27,7 @@ export const themes = {
       accentColor: "#0b44cd",
       secondAccentColor: "#3470ff",
       mainBgColor: "#010101",
+      ModalBgColor: "rgba(0, 0, 0, 0.5)",
     },
   },
 };

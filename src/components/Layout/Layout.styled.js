@@ -37,3 +37,21 @@ export const NavLinkStyled = styled(NavLink)`
     margin-right: 20px;
   }
 `;
+
+export const ModalBtn = styled.button`
+  font-size: 24px;
+  justify-content: center;
+  background-color: transparent;
+  color: ${(props) => props.theme.colors.textColor};
+  margin: 0;
+  padding: 10px;
+`;
+export const ThemeBtn = styled.button`
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  background-color: transparent;
+  color: ${(props) => props.theme.colors.textColor};
+  margin: 0;
+`;
