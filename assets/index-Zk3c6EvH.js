@@ -299,9 +299,21 @@ to {
     outline: none;
   }
 
+  input:-webkit-autofill,
+  textarea:-webkit-autofill {
+    background-color: transparent !important;
+    color: inherit !important;
+  }
+
+  input:-webkit-autofill::first-line,
+  textarea:-webkit-autofill::first-line {
+    color: inherit !important; 
+    background-color: transparent !important; 
+  }
+
   .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 40px;
   }
-`,hw=_.lazy(()=>_p(()=>import("./Home-DFcdUtpQ.js"),__vite__mapDeps([]))),mw=_.lazy(()=>_p(()=>import("./Products-D5ZTlvC0.js"),__vite__mapDeps([]))),yw={light:{colors:{textColor:"#121417",secondTextColor:"#8a8a89",accentColor:"#0b44cd",secondAccentColor:"#3470ff",mainBgColor:"white",ModalBgColor:"rgba(0, 0, 0, 0.5)"}},dark:{colors:{textColor:"white",secondTextColor:"#8a8a89",accentColor:"#0b44cd",secondAccentColor:"#3470ff",mainBgColor:"#010101",ModalBgColor:"rgba(0, 0, 0, 0.5)"}}},vw=()=>{const[e,t]=_.useState(()=>localStorage.getItem("theme")||"dark"),n=()=>{const r=e==="light"?"dark":"light";t(r),localStorage.setItem("theme",r)};return T.jsxs(u1,{theme:yw[e],children:[T.jsx(pw,{}),T.jsx(fw,{currentTheme:e,toggleTheme:n,children:T.jsx(_.Suspense,{fallback:T.jsx(g1,{}),children:T.jsxs(Yy,{children:[T.jsx(Pr,{path:"/",element:T.jsx(hw,{})}),T.jsx(Pr,{path:"/products",element:T.jsx(mw,{})}),T.jsx(Pr,{path:"/products/:productId/*",element:T.jsx(dw,{})}),T.jsx(Pr,{path:"*",element:T.jsx(Ky,{to:"/"})})]})})})]})};var gw="persist/FLUSH",ww="persist/REHYDRATE",Sw="persist/PAUSE",kw="persist/PERSIST",xw="persist/PURGE",Ew="persist/REGISTER";const Cw=Cg({reducer:{modal:Kg},middleware:e=>e({serializableCheck:{ignoredActions:[gw,ww,Sw,kw,xw,Ew]}})});ql.createRoot(document.getElementById("root")).render(T.jsx(q.StrictMode,{children:T.jsx(nv,{basename:"/react-vite-template/",children:T.jsx(F1,{store:Cw,children:T.jsx(vw,{})})})}));export{T as j,Se as u};
+`,hw=_.lazy(()=>_p(()=>import("./Home-7Oekjkhk.js"),__vite__mapDeps([]))),mw=_.lazy(()=>_p(()=>import("./Products-BZFcqa9M.js"),__vite__mapDeps([]))),yw={light:{colors:{textColor:"#121417",secondTextColor:"#8a8a89",accentColor:"#0b44cd",secondAccentColor:"#3470ff",mainBgColor:"white",ModalBgColor:"rgba(0, 0, 0, 0.5)"}},dark:{colors:{textColor:"white",secondTextColor:"#8a8a89",accentColor:"#0b44cd",secondAccentColor:"#3470ff",mainBgColor:"#010101",ModalBgColor:"rgba(0, 0, 0, 0.5)"}}},vw=()=>{const[e,t]=_.useState(()=>localStorage.getItem("theme")||"dark"),n=()=>{const r=e==="light"?"dark":"light";t(r),localStorage.setItem("theme",r)};return T.jsxs(u1,{theme:yw[e],children:[T.jsx(pw,{}),T.jsx(fw,{currentTheme:e,toggleTheme:n,children:T.jsx(_.Suspense,{fallback:T.jsx(g1,{}),children:T.jsxs(Yy,{children:[T.jsx(Pr,{path:"/",element:T.jsx(hw,{})}),T.jsx(Pr,{path:"/products",element:T.jsx(mw,{})}),T.jsx(Pr,{path:"/products/:productId/*",element:T.jsx(dw,{})}),T.jsx(Pr,{path:"*",element:T.jsx(Ky,{to:"/"})})]})})})]})};var gw="persist/FLUSH",ww="persist/REHYDRATE",Sw="persist/PAUSE",kw="persist/PERSIST",xw="persist/PURGE",Ew="persist/REGISTER";const Cw=Cg({reducer:{modal:Kg},middleware:e=>e({serializableCheck:{ignoredActions:[gw,ww,Sw,kw,xw,Ew]}})});ql.createRoot(document.getElementById("root")).render(T.jsx(q.StrictMode,{children:T.jsx(nv,{basename:"/react-vite-template/",children:T.jsx(F1,{store:Cw,children:T.jsx(vw,{})})})}));export{T as j,Se as u};
