@@ -58,6 +58,18 @@ const GlobalStyles = createGlobalStyle`
     outline: none;
   }
 
+  input:-webkit-autofill,
+  textarea:-webkit-autofill {
+    background-color: transparent !important;
+    color: inherit !important;
+  }
+
+  input:-webkit-autofill::first-line,
+  textarea:-webkit-autofill::first-line {
+    color: inherit !important; 
+    background-color: transparent !important; 
+  }
+
   .container {
   max-width: 1200px;
   margin: 0 auto;
